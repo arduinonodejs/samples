@@ -1,0 +1,33 @@
+<ion-view title="LCD">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+   
+   
+   <form ng-submit="writeLCD()">
+      
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Line 1</span>
+          <input type="text" ng-model="writeLCD.line1" ng-maxlength="16" maxlength="16">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Line 2</span>
+          <input type="text" ng-model="writeLCD.line2" ng-maxlength="16"  maxlength="16">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Send It</button>
+        </label>
+      </div>
+    </form>   
+    
+    <div id="logo" ng-show="warning">
+	    
+	    <p align="center"><img src="img/ionic.png"></p>
+	    
+	    
+    </div>
+   
+  </ion-content>
+</ion-view>

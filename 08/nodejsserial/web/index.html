@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <title>Testing Node JS Serial</title>
+    <style>
+	  #analogread0, #analogread1, #analogread2 {
+	    display: block;
+	    width: 30px;
+	    height: 20px;
+	    margin: 5px;
+	    padding: 5px;
+	    text-align: right;
+	    color: white;
+	  }
+	  
+	  #analogread0 {
+		  background: red;
+		  
+	  }
+	  
+	  #analogread1 {
+		  background: green;
+	  }
+	  
+	   #analogread2 {
+		  background: blue;
+	  }
+	</style>
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/socket.io.js"></script>
+
+     <script>
+     	var socket = io.connect('http://192.168.0.13:3000');
+     	var min_width=30;
+     	    
+	    socket.on('disconnect', function (data) {
+	    	console.log("disconnect: "+data);
+	    	setTimeout(function(){ location.reload(); }, 900);
+	    });
+	    
+	    socket.on('from_server', function (data) {
+	    
+	    	for (i=0; i<data.analogread.length;i++) {
+		    	//console.log(data.analogread[i]);
+		    	$("#analogread"+i).text(data.analogread[i]);
+		    	if (data.analogread[i]<min_width) {
+		    		data.analogread[i]=min_width;
+		    	}
+		    	$("#analogread"+i).width(data.analogread[i]);
+	    	}
+	    	
+	    });
+	    
+	    
+	 </script>
+
+  </head>
+  <body>
+    <h1>Read</h1>
+    
+    <div id="analogread0">0</div>
+    <div id="analogread1">0</div>
+    <div id="analogread2">0</div>
+    
+      
+  </body>
+</html>

@@ -1,0 +1,24 @@
+2014-06-20 17:19:25.441 HelloCordova[12925:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-20 17:19:25.704 HelloCordova[12925:70b] Unlimited access to network resources
+2014-06-20 17:19:25.870 HelloCordova[12925:70b] Fix applied for database locations?: YES
+2014-06-20 17:19:33.313 HelloCordova[12925:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-20 17:19:33.313 HelloCordova[12925:70b] [CDVTimer][statusbar] 0.446975ms
+2014-06-20 17:19:33.314 HelloCordova[12925:70b] [CDVTimer][TotalPluginStartup] 0.845015ms
+2014-06-20 17:19:33.557 HelloCordova[12925:70b] Resetting plugins due to page load.
+2014-06-20 17:19:34.893 HelloCordova[12928:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-20 17:19:34.899 HelloCordova[12928:70b] Unlimited access to network resources
+2014-06-20 17:19:34.938 HelloCordova[12928:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-20 17:19:34.939 HelloCordova[12928:70b] [CDVTimer][statusbar] 0.428021ms
+2014-06-20 17:19:34.939 HelloCordova[12928:70b] [CDVTimer][TotalPluginStartup] 0.785947ms
+2014-06-20 17:19:34.971 HelloCordova[12928:70b] Resetting plugins due to page load.
+2014-06-20 17:19:35.464 HelloCordova[12928:70b] Finished load of: file:///Users/moncho/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/7AF2DC7D-40E9-4700-A97F-616D8C185ED0/HelloCordova.app/www/index.html
+2014-06-20 17:33:18.506 HelloCordova[13557:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-20 17:33:19.059 HelloCordova[13557:70b] Unlimited access to network resources
+2014-06-20 17:33:24.012 HelloCordova[13557:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-20 17:33:24.013 HelloCordova[13557:70b] [CDVTimer][statusbar] 1.029015ms
+2014-06-20 17:33:24.013 HelloCordova[13557:70b] [CDVTimer][TotalPluginStartup] 1.457036ms
+2014-06-20 17:33:27.953 HelloCordova[13557:70b] Resetting plugins due to page load.
+2014-06-20 17:33:42.535 HelloCordova[13557:70b] THREAD WARNING: ['Device'] took '176.102783' ms. Plugin should use a background thread.
+2014-06-20 17:33:43.181 HelloCordova[13557:70b] Finished load of: file:///Users/moncho/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/7AF2DC7D-40E9-4700-A97F-616D8C185ED0/HelloCordova.app/www/index.html
+2014-06-20 17:33:43.893 HelloCordova[13557:70b] deviceready has not fired after 5 seconds.
+2014-06-20 17:33:43.893 HelloCordova[13557:70b] Channel not fired: onCordovaInfoReady

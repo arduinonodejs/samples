@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+var debug = require('debug')('mysocket');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
+
+var io = require('socket.io')(server);
+
+io.on('connection', function (socket) {
+  socket.on('from_client', function (data) {
+    console.log(data);
+    socket.emit('from_server', { body: data.my })
+  });
+});

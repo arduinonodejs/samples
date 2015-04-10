@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="javascripts/socket.io.js"></script>
+  
+  <script>
+     	var socket = io.connect('http://<%= host %>');
+     	    
+	    socket.on('disconnect', function (data) {
+	    	//console.log("disconnect: "+data);
+	    	setTimeout(function(){ location.reload(); }, 900);
+	    });
+	    
+	    socket.on('from_server', function (data) {
+	    	console.log(data.body);
+	    	$("#result").text( data.body );
+	    });
+	    
+	    function sendToServer () {
+		    var text=$("#text").val();
+		    if (text!='') {
+			    socket.emit('from_client', { my:  text});
+		    }
+		    $("#text").val("");
+	    }
+	 </script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= host %></p>
+
+    <p>
+    	<input type="text" name="text" id="text">
+    </p>
+    <p>
+    	<input type="button" name="send" value="send" onclick="javascritp:sendToServer();">
+    </p>
+    
+    <h4>
+    	<span id="result"></span>
+    </h4>
+
+
+  </body>
+</html>

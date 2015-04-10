@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/socket.io.js"></script>
+    <script src="/javascripts/angular.min.js"></script>
+    <script src="/javascripts/scrollglue.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/services.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="AppCtrl">
+    <h1><%= title %></h1>
+
+    <h2 ng-show="server">
+	{{server}}
+    </h2>
+
+    <input type="text" placeholder="Your name ..." ng-model="your_name">
+     <span class="error" ng-show="error">
+          {{error}}
+    </span>
+
+	    <form ng-submit="sendMessage()">
+	    	Message: <input size="60" ng-model="message">
+	    	<input type="submit" value="Send">
+	    </form>
+	    
+	    
+	    <div scroll-glue>
+	    	<ul>
+                    <li ng-repeat="message in messages">{{message.your_name}}: {{message.message}}</li>
+        	</ul>
+        </div>
+
+
+  </body>
+</html>

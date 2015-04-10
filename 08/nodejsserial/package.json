@@ -1,0 +1,13 @@
+{
+  "name": "testing_serial",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -e js,css,ejs app.js"
+  },
+  "dependencies": {
+    "serialport": "",
+    "socket.io": "",
+    "socket.io-client":""
+  }
+}

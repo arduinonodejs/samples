@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/socket.io.js"></script>
+    <script src="/javascripts/angular.min.js"></script>
+    <script src="/javascripts/scrollglue.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/services.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="AppCtrl">
+    <h1><%= title %></h1>
+
+    <h2 ng-show="server">
+	{{server}}
+    </h2>
+
+  </body>
+</html>
